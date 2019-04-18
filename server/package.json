@@ -1,0 +1,16 @@
+{
+  "name": "react-api-project",
+  "version": "1.0.0",
+  "description": "A project using react, express and MongoDB to display and store data from the Riot games API",
+  "main": "MongoDB.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Butler",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.2"
+  }
+}
