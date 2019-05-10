@@ -4,6 +4,9 @@ import './App.css';
 import UserInfo from './components/UserInfo';
 import ListUsers from './components/ListUsers';
 import MatchHistory from './components/MatchHistory';
+import AddUser from './containers/AddUser'
+import Footer from './components/Footer'
+import VisibleTodoList from './containers/VisibleTodoList'
 
 class App extends Component {
   render() {
@@ -12,6 +15,13 @@ class App extends Component {
       <div className="container">
       <ListUsers></ListUsers>
       <UserInfo></UserInfo>
+      </div>
+      <div className="container">
+       <div className="userData">  
+      <AddUser></AddUser>
+      <VisibleTodoList></VisibleTodoList>
+      <Footer />
+      </div>
       </div>
       <div>
       <div className="container">
