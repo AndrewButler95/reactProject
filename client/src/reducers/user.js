@@ -1,4 +1,5 @@
 const user = (state, action) => {
+  console.log(state,action)
     switch (action.type) {
       case 'ADD_USER':
       return {
@@ -20,6 +21,11 @@ const user = (state, action) => {
             return {...state, highlight: true}
         }
         else return {...state, highlight: false}
+        case 'HIGHLIGHT_USER':
+          if(state.id === action.id){
+              return {...state, highlight: true}
+          }
+          else return {...state, highlight: false}
       default:
         return state
     }

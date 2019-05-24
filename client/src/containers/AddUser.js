@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addUser } from '../actions'
+import { store } from '../store.js'
 
 const AddUser = ({ dispatch }) => {
   let input
@@ -12,7 +13,8 @@ const AddUser = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        dispatch(addUser(input.value))
+        let state = store.getState();
+        dispatch(addUser(state.users.length, input.value))
         input.value = ''
       }}>
         <input ref={node => input = node} />

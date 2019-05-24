@@ -1,7 +1,7 @@
-let nextUserId = 0
-export const addUser = text => ({
+
+export const addUser = (id,text) => ({
   type: 'ADD_USER',
-  id: nextUserId++,
+  id,
   text
 })
 
@@ -10,14 +10,15 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
-export const getid = id => ({
-  type:"SELECT_ID",
-  id
+export const setUserVisibility = completed => ({
+  type:"TOGGLE_COMPLETED",
+  completed: !completed,
+
 })
 
-export const toggleUser = id => ({
+export const toggleUser = () => ({
   type: 'TOGGLE_USER',
-  id
+  
 })
 
 export const highlightUser = id => ({

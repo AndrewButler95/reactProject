@@ -9,13 +9,14 @@ import Footer from './components/Footer'
 import VisibleTodoList from './containers/VisibleTodoList'
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-      <div className="container">
+      <div className="App" cookies={this.props.cookies}>
+      {/* <div className="container">
       <ListUsers></ListUsers>
       <UserInfo></UserInfo>
-      </div>
+      </div> */}
       <div className="container">
        <div className="userData">  
       <AddUser></AddUser>

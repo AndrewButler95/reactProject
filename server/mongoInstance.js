@@ -1,4 +1,5 @@
 let axios = require('axios');
+let store = require('../client/src/store');
 
 let saveData = function(user){
   const url = 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Tehab?api_key=RGAPI-fa626e3d-ae50-4417-9b2f-1356cb642f11'

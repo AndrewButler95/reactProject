@@ -2,11 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { toggleUser } from '../actions'
 
-const FavouriteButton = function ({ dispatch, user }) {
-console.log("button pressed")
+const FavouriteButton = function ({ dispatch }) {
 return (
   <div>
-<button onSubmit={e => {
+<button onClick={e => {
   e.preventDefault()
   dispatch(toggleUser())}} className="styleButton" type="submit">
 Add Favourite

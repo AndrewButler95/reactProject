@@ -1,5 +1,8 @@
 import user from './user' 
-const users = (state = [], action) => {
+import axios from 'axios';
+
+let temp = [{id:0, completed:false, text:"asddas",highlight:false}];
+const users = (state = temp, action) => {
     switch (action.type) {
       case 'ADD_USER':
         return [
