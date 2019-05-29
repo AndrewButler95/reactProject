@@ -1,8 +1,8 @@
 import user from './user' 
 
-const users = (state = [], action) => {
+const favouriteusers = (state = [], action) => {
     switch (action.type) {
-      case 'ADD_USER':
+      case 'ADD_FAVOURITEUSER':
         return [
           ...state,
           user(undefined, action)
@@ -16,4 +16,4 @@ const users = (state = [], action) => {
     }
   }
   
-  export default users
+  export default favouriteusers

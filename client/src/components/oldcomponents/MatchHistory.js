@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../css/MatchHistory.css';
-import MyButton from './MyButton';
 
 class MatchHistory extends Component {
     constructor(props) {
@@ -24,7 +23,6 @@ class MatchHistory extends Component {
             )
     }
 
-
     render() {
         if(this.state.data.matches != undefined){
         let renderArray = [];
@@ -32,18 +30,14 @@ class MatchHistory extends Component {
         for (let i = 0; i < this.state.data.matches.length; i++) {
             let temparray = [];
             Object.keys(this.state.data.matches[i]).map(function(key) {
-                console.log(key)
-                console.log(this.state.data.matches[i])
                 temparray.push(<div>{ this.state.data.matches[i][key] }</div>)
              }.bind(this))
              renderArray.push(temparray)
         }
       
-         
-        console.log(renderArray)
         return (
             <div className="userData">  
-data       {headers}
+           {headers}
            {renderArray}
     </div>
         );

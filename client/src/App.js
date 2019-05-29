@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import UserInfo from './components/UserInfo';
-import ListUsers from './components/ListUsers';
-import MatchHistory from './components/MatchHistory';
 import AddUser from './containers/AddUser'
 import Footer from './components/Footer'
 import VisibleTodoList from './containers/VisibleTodoList'
@@ -25,8 +21,8 @@ class App extends Component {
       </div>
       </div>
       <div>
-      <div className="container">
-      <MatchHistory></MatchHistory></div>
+      {/* <div className="container">
+      <MatchHistory></MatchHistory></div> */}
       </div>
           <p>
             Edit <code>src/App.js</code> and save to reload.
