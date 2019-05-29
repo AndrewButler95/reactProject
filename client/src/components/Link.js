@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../css/Link.css'
 
 const Link = ({ active, children, onClick }) => (
     <button className = "styleButton"

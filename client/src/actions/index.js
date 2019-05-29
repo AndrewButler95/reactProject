@@ -5,6 +5,12 @@ export const addUser = (id,text) => ({
   text
 })
 
+export const addFavouriteUser = (id,text) => ({
+  type: 'ADD_FAVOURITEUSER',
+  id,
+  text
+})
+
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
   filter

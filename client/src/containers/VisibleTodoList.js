@@ -9,7 +9,7 @@ const getVisibleUsers = (users, filter) => {
       case VisibilityFilters.SHOW_ALL:
         return users
       case VisibilityFilters.SHOW_COMPLETED:
-        return users.filter(t => t.completed)
+        return users.filter(t => !t.completed)
       case VisibilityFilters.SHOW_ACTIVE:
         return users.filter(t => !t.completed)
       default:
@@ -17,10 +17,16 @@ const getVisibleUsers = (users, filter) => {
     }
   }
   
-  const mapStateToProps = state => ({
-    users: getVisibleUsers(state.users, state.visibilityFilter)
-  })
-  
+  const mapStateToProps = function(state){
+    if(state.visibilityFilter === VisibilityFilters.SHOW_COMPLETED){
+    return {users: getVisibleUsers(state.favouriteusers, state.visibilityFilter)}
+  }
+  else{
+   return { users:  getVisibleUsers(state.users, state.visibilityFilter)}
+  }
+}
+
+
 
 const mapDispatchToProps = dispatch => ({
     toggleUser: id => dispatch(toggleUser(id)),
