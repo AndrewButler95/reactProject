@@ -4,3 +4,4 @@ I am using MongoDB as my backend Database and creating the front end using react
 a single page application that can be used to look up player information from the game 'League of Legends' and display, store and use it
 in a clear and interesting way.
 
+![Image of Application](https://github.com/AndrewButler95/reactProject/reactimage.png)
